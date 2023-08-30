@@ -1,17 +1,22 @@
-# Blender-Rigged-Hand-Motion-using-Flex-Sesors
-This is a demo video from my personal project using Blender Game Engine, Flex Sensors, PySerial for Communication
+# IMU-Blender-Rigged-Hand
 
-YouTube Video
--------------
-[![Blender-Rigged-Hand-Motion-using-Flex-Sesors](https://img.youtube.com/vi/P8pPgoxgQ3c/0.jpg)](https://www.youtube.com/watch?v=P8pPgoxgQ3c)
+IMU => PySerial => Blender Game Engine => Virtual Hand Control
 
-How to run this project.
------------------------
+Blender
+-------
 
-1. Part One Arduino File
-  Run the arduino script in Arduino folder, this script will read the flex sensor readings and publish them in pyserial port
-  from where blender script will read the output.
-2. Part Two blender python script
-  Open the .blend file from blender folder in Blender software, it will have a python script which will read the values     published from the arduino file and will animate the hand.
+- Install blender 2.78:\
+https://download.blender.org/release/Blender2.78/
 
+- Install pip inside blender and pyserial:
+```
+/opt/blender-2.78/2.78/python/bin/python3.5m -m ensurepip --upgrade
+/opt/blender-2.78/2.78/python/bin/python3.5m -m pip install pyserial
+```
+
+- Open the .blend file with Blender, it will have a python script which will read the values received on the serial port.
+
+- Click on the hand and press "P" to start the animation.
+
+- Press ESC to stop it
 
